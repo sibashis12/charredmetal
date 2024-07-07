@@ -339,7 +339,7 @@ function removeNav(mode){
 
 function displayNav(mode){
     const mover=getElement("#Mover");
-    addClass(mover, "nav");
+    addClass(mover, "grids");
     const prevBtn=getElement("#PrevBtn");
     const nextBtn=getElement("#NextBtn");
     const endBtn=getElement("#EndBtn");
