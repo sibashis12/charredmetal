@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--To Do List->
+1. Add Lifeline
+2. Show High Scores
+3. Learn and Use Animations
+5. Make Classic Mode
+8. Add Badges-->
+
+<!-- Problems->
+ 1.Lifelines
+ 3. High Scores set up.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="BlitzQuiz, Sibashis Som, Quiz, Puzzle, Fun, Game, Dynamic">
+    <meta name="description" content="The Best Dynamic Quiz Website">
+    <title>BlitzQuiz</title>
+    <link rel="stylesheet" type="text/css" href="css/utils.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header id="Header" class="header">
+        <img class="logo" src="images/logo.png" alt="BlitzQuiz Logo">
+        <h1 id="BlitzQuiz" class="BlitzQuiz">BlitzQuiz</h1>
+    </header>
+    <div id="Home" class="show">
+        <h2 id="description">Welcome to <div class="BlitzQuiz">BlitzQuiz</div>, the best website for quiz enthusiasts! Whether you're a lore hound, a quiz master, or just looking to have some fun, we've got some quiz rounds for you. Our dynamic quizzes will keep you entertained as you try to learn new trivia, to beat the high score or to just relax after a stressful day. Powered by <a href="https://the-trivia-api.com/" target="_blank">Trivia API</a>.</h2>
+        <div id="opnContainer" class="container">
+            <button id="ClassicModeBtn" class="home btn">Classic Mode</button>
+            <button id="BulletModeBtn" class="home btn">Bullet Mode</button>
+            <button id="HighScoresBtn" class="home btn">High Scores</button>
+        </div>
+        <div id="optndescription">
+            <h3>We have 2 modes as of now:<ul>
+                <li class="modeDesc">Classic Mode- The classic mode has 20 questions with 4 options each, and one correct answer. You will be provided with 10 minutes for the quiz. Currently a work in progress, please use Bullet Node in the time being.<br><em class="ptsd jee"> You can navigate freely between the questions.</em></li>
+                <li class="modeDesc">Bullet Mode- The bullet mode has 20 questions with 4 options each, and one correct answer. The questions will be rapid-fire, and you will be provided with 15 seconds for each question. <p id="BSeeMore">See Rules-> </p><p id="BRules" class="hide">You will have one lifeline which you can use by not answering the question. If it is used, score will turn blue. If your option is incorrect, score will turn red, and if your option is correct, score will turn green. The score will remain white if you do not have any lifelines and do not answer the question.</p><br><em class="ptsd moodle">Back navigation is not allowed.</em></li>
+            </ul></h3>
+        </div>
+    </div>
+    <div id="BulletMode" class="hide">
+        <div id="BulletModeContainer" class="section">
+            <div id="Nav" class="nav">
+                <h2 class="mode">BulletMode</h2>
+                <p class="score">
+                    Score-0
+                </p>
+                <p id="Timer" class="timer">
+                    Time left-00:10
+                </p>
+            </div>
+            <div id="BQuestion" class="question btn">
+                Loading...
+            </div>
+            <div id="BBody" class="answer Box">
+                <div id="Options1-2" class="sector Box">
+                    <div id="Option1" class="option btn">
+                        A.
+                    </div>
+                    <div id="Option2" class="option btn">
+                        B.
+                    </div>
+                </div>
+                <div id="Options3-4" class="sector Box">
+                    <div id="Option3" class="option btn">
+                        C.
+                    </div>
+                    <div id="Option4" class="option btn">
+                        D.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ClassicMode" class="hide">
+
+    </div>
+    <div id="HighScores" class="hide">
+        <div id="ClassicHighScores" class="highScoresContainer">
+            <div class="nav">
+                <h2 class="mode">Classic Mode</h2>
+                <div id="CRecord"class="record">
+                    High Score:0
+                </div>
+            </div>
+            <div id="ClassicHighScoresContainer" class="highScores">
+                <div id="CHighScore" class="scores right">
+                    High Scores
+                </div>
+                <div id="CHighOccur" class="scores left">
+                    Times Achieved
+                </div>
+                <div id="C1Score" class="scores right gold">
+                    -
+                </div>
+                <div id="C1Occur" class="scores left gold">
+                    -
+                </div>
+                <div id="C2Score" class="scores right silver">
+                    -
+                </div>
+                <div id="C2Occur" class="scores left silver">
+                    -
+                </div>
+                <div id="C3Score" class="scores right bronze">
+                    -
+                </div>
+                <div id="C3Occur" class="scores left bronze">
+                    -
+                </div>
+                <div id="C4Score" class="scores right">
+                    -
+                </div>
+                <div id="C4Occur" class="scores left">
+                    -
+                </div>
+                <div id="C5Score" class="scores right">
+                    -
+                </div>
+                <div id="C5Occur" class="scores left">
+                    -
+                </div>
+            </div>  
+        </div>
+        <div id="Margin"></div>
+        <div id="BulletHighScores" class="highScoresContainer">
+            <div class="nav">
+                <h2 class="mode">Bullet Mode</h2>
+                <div id="BRecord" class="record">
+                    High Score: 0
+                </div>
+            </div>
+            <div id="BulletHighScoresContainer" class="highScores">
+                <div id="BHighScore" class="scores right">
+                    High Scores
+                </div>
+                <div id="BHighOccur" class="scores left">
+                    Times Achieved
+                </div>
+                <div id="B1Score" class="scores right gold">
+                    -
+                </div>
+                <div id="B1Occur" class="scores left gold">
+                    -
+                </div>    
+                <div id="B2Score" class="scores right silver">
+                    -
+                </div>
+                <div id="B2Occur" class="scores left silver">
+                    -
+                </div> 
+                <div id="B3Score" class="scores right bronze">
+                    -
+                </div>
+                <div id="B3Occur" class="scores left bronze">
+                    -
+                </div> 
+                <div id="B4Score" class="scores right">
+                    -
+                </div>
+                <div id="B4Occur" class="scores left">
+                    -
+                </div> 
+                <div id="B5Score" class="scores right">
+                    -
+                </div>
+                <div id="B5Occur" class="scores left">
+                    -
+                </div> 
+            </div>
+        </div>
+        <div id="HighScoresNav" class="Center">
+            <button id="HomePageBtn" class="home btn">Back To Home</button>
+        </div>
+    </div>
+    <div id="Mover" class="hide">
+        <button id="PrevBtn" class="mover btn">Previous</button>
+        <button id="EndBtn" class="mover btn">Home</p>
+        <button id="NextBtn" class="mover btn">Next</button>
+    </div>
+    <div id="EndPage" class="hide">
+        <div id="Message">
+
+        </div>
+        <div id="opnContainer" class="container">
+            <button id="ShowScoresBtn" class="home btn">Show My Choices</button>
+            <button id="RestartBtn" class="home btn"></button>
+            <button id="HomeBtn" class="home btn">Back To Home</button>
+        </div>
+    </div>
+    <!--<h1 id="Loading">Loading...</h1>-->
+</body>
+</html>

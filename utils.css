@@ -1,0 +1,111 @@
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.right{
+    justify-self:right;
+}
+
+.left{
+    justify-self:left;
+}
+
+.gold{
+    background: linear-gradient(to top right, gold , darkgoldenrod);
+
+    -webkit-background: linear-gradient(to top right, gold , darkgoldenrod);
+    -moz-background: linear-gradient(to top right, gold , darkgoldenrod);
+    -o-background: linear-gradient(to top right, gold , darkgoldenrod);
+    background: linear-gradient(to top right, gold , darkgoldenrod);
+}
+
+.silver{
+    background: linear-gradient(to top right, silver , darkgray);
+
+    -webkit-background: linear-gradient(to top right, silver , darkgray);
+    -moz-background: linear-gradient(to top right, silver , darkgray);
+    -o-background: linear-gradient(to top right, silver , darkgray);
+    background: linear-gradient(to top right, silver , darkgray);
+}
+
+.bronze{
+    background: linear-gradient(to top right,#b08d57,#CD7F32);
+}
+
+.btn{
+    font-family:"Metal Mania";
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding:1rem;
+    font-size:1.5rem;
+    box-shadow: 0 0 5px;
+    text-align:center;
+    margin:0.3rem;
+    /*OMG*/
+}
+
+.ptsd{
+    position:relative;
+    text-decoration:underline;
+    color:chartreuse;
+    cursor:pointer;
+
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.ptsd:hover{
+    color:red;
+
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.ptsd:hover::after{
+    position:absolute;
+    margin:0;
+    padding:0.5rem;
+    font-size:0.75rem;
+    color:black;
+    background-color:aliceblue;
+    top:100%;
+    left:0;
+    right:0;
+    text-align:center;
+    width:auto;
+}
+
+.ptsd.moodle:hover::after{
+    content:"Moodle PTSD intensifies";
+}
+.ptsd.jee:hover::after{
+    content:"JEE PTSD intensifies";
+}
+
+.full{
+    background: linear-gradient(to top right, midnightblue , black);
+
+    -webkit-background: linear-gradient(to top right, midnightblue , black);
+    -moz-background: linear-gradient(to top right, midnightblue , black);
+    -o-background: linear-gradient(to top right, midnightblue , black);
+    background: linear-gradient(to top right, midnightblue , black);
+}
+
+.equal{
+    background-color: black;
+    color:silver;
+}
+
+.beat{
+    background-color: darkturquoise;
+    color:black;
+}

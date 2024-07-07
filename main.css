@@ -1,0 +1,538 @@
+/*#Loading {
+    width:1vw;
+    height:1vw;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face{
+    font-family: "Harry Potter";
+    src: url("../Fonts/HARRYP__.TTF");
+}
+.metal-mania-regular {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.raleway-quality {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: bold;
+  }
+  
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#BlitzQuiz{
+    justify-self: center;
+
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+    cursor:pointer;
+}
+
+#BlitzQuiz:hover{
+    text-decoration:underline;
+}
+
+.BlitzQuiz{
+    font-family:"Harry Potter";
+    display:inline;
+}
+
+a{
+    color:inherit;
+    color:#23afaf;
+    text-decoration: none;
+
+    -webkit-transition: color 1s, text-decoration 1s;
+    -moz-transition: color 1s, text-decoration 1s;
+    -o-transition: color 1s, text-decoration 1s;
+    transition: color 1s, text-decoration 1s;
+}
+
+a:hover{
+    color:#dfa5df;/*Color code of Trivia API logo from their website*/
+    text-decoration:underline;
+
+    -webkit-transition: color 1s, text-decoration 1s;
+    -moz-transition: color 1s, text-decoration 1s;
+    -o-transition: color 1s, text-decoration 1s;
+    transition: color 1s, text-decoration 1s;
+}
+
+#BSeeMore{
+    color:turquoise;
+    display:inline;
+
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+    cursor:pointer;
+
+}
+
+#BSeeMore:hover{
+    text-decoration:underline;
+    color:gold;
+}
+
+#BRules{
+    color:turquoise;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: gold;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 0;
+    padding: 0;
+    min-height:20vh;
+    border: 2px solid turquoise;
+    border-left: 0;
+    border-right: 0;
+    background-color: black;
+    color:purple;
+}
+
+.logo{
+    max-height:4.74rem;
+    max-width:4.74rem;
+    border-radius:50%;
+    border: 3px solid var(--nyccolor, gold);
+    background-color: var(--bcolor, chartreuse);
+    margin:0;
+    justify-self:left;
+    align-self:center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0.5rem 0;
+    padding: 0;
+    min-height: 10vh;
+    border-left: 0;
+    border-right: 0;
+}
+
+.home{
+    background: linear-gradient(to top right, lightskyblue , darkturquoise);
+
+    -webkit-background: linear-gradient(to top right, lightskyblue , darkturquoise);
+    -moz-background: linear-gradient(to top right, lightskyblue , darkturquoise);
+    -o-background: linear-gradient(to top right, lightskyblue , darkturquoise);
+    background: linear-gradient(to top right, lightskyblue , darkturquoise);
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.home:hover{
+    background: linear-gradient(to top right, blue , midnightblue);
+    border-color:gold;
+    color:gold;
+    transform:scale(1.1);
+
+    -webkit-background: linear-gradient(to top right, blue , midnightblue);
+    -moz-background: linear-gradient(to top right, blue , midnightblue);
+    -o-background: linear-gradient(to top right, blue , midnightblue);
+    background: linear-gradient(to top right, blue , midnightblue);
+
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+#description{
+    margin:1rem;
+    font-size: 1.5rem;
+    font-family:"Times New Roman", sans-serif;
+    text-align:center;
+}
+
+#ClassicModeBtn{
+    position:relative;
+}
+
+#ClassicModeBtn:hover{
+    background:lightgray;
+    border:black;
+    color:black;
+    transform:none;
+}
+
+#ClassicModeBtn:hover::after{
+    position:absolute;
+    font-family:'Times New Roman', Times, serif;
+    font-size:1rem;
+    top:100%;
+    left:0;
+    right:0;
+    background-color:antiquewhite;
+    color:black;
+    padding:0.5rem;
+    content:"Work in Progress";
+}
+
+.modeDesc{
+    font-size:1rem;
+    margin:0.5rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.section{
+    min-height:80vh;
+    padding:2rem;
+    margin:0 0;
+    background-color: black;
+}
+
+.nav{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding:0.5vh;
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.nav>{
+    justify-self:center;
+}
+
+.mode{
+    color:turquoise;
+    font-size:1.75rem;
+}
+
+.score{
+    color:bisque;
+    justify-self:center;
+    align-self:center;
+}
+
+.timer{
+    color:bisque;
+    justify-self:right;
+    align-self:center;
+}
+
+.Box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    color:black;
+}
+
+.question{
+    background-color:bisque;
+    color:black;
+    font-size:2rem;
+    align-items:center;
+    margin:2vh auto;
+    text-align:center;
+    max-width:1050px;
+}
+
+#BQuestion{
+    min-height:18vh;
+    font-family:"Raleway";
+}
+
+#BBody{
+    min-height:35vh;
+}
+
+.sector{
+    width:100%;
+    max-width:1000px;
+    justify-content:space-around;
+    align-items:center;
+    align-content:center;
+    margin:1vh 1vh;
+    height:50%;
+}
+
+.option{
+    font-family:"Raleway";
+    max-width:300px;
+    min-width:45%;
+    background-color:turquoise;
+    border-radius:7px;
+    margin: 1vh 1vh;
+    -webkit-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    -moz-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    -o-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    transition: color 0.4s, background-color 0.4s, transform 0.4s;
+}
+
+.option:hover{
+    background-color:darkcyan;
+    color:gold;
+    border-color:gold;
+    transform:scale(1.025);
+
+    -webkit-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    -moz-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    -o-transition: color 0.4s, background-color 0.4s, transform 0.4s;
+    transition: color 0.4s, background-color 0.4s, transform 0.4s;
+}
+
+.correct{
+    background-color:chartreuse;
+    position:relative;
+
+}
+
+.correct:hover{
+    background-color: darkgreen;
+}
+
+.correct:hover::after{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background-color:antiquewhite;
+    color:black;
+    padding:0.5rem;
+    content:"Correct Choice";
+}
+
+.wrong{
+    background-color: coral;
+}
+
+.wrong:hover{
+    background-color: darkred;
+}
+
+.wrong:hover::after{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background-color:antiquewhite;
+    color:black;
+    padding:0.5rem;
+    content:"Incorrect Choice";
+}
+
+#Message{
+    color:gold;
+    font-size:2.5rem;
+    text-align:center;
+    margin:0 auto;
+    padding:1rem;
+}
+
+#EndPage{
+    min-height:80vh;
+}
+
+#Mover{
+    min-height:10vh;
+}
+
+.mover{
+    font-size:1rem;
+    margin:0.2rem;
+    max-width:200px;
+}
+
+.mover:hover{
+    color:gold;
+    border-color:gold;
+}
+
+#PrevBtn{
+    background-color: lightpink;
+}
+
+#PrevBtn:hover{
+    background-color: orchid;
+}
+
+#EndBtn{
+    background-color:darkkhaki;
+    justify-self:center;
+}
+
+#EndBtn:hover{
+    background-color: darkolivegreen;
+}
+
+#NextBtn{
+    background-color: lightskyblue;
+}
+
+#NextBtn:hover{
+    background-color: deepskyblue;
+}
+
+#Message{
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+    cursor:pointer;
+}
+
+.highScores{
+    min-height:30vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:0 5vw;
+    gap:0;
+    grid-auto-rows: auto;
+    justify-content:center;
+    align-items:center;
+}
+
+.scores{
+    height:100%;
+    margin:0;
+    font-family:"Raleway";
+    min-width:30vw;
+    max-width:40vw;
+    font-size:1rem;
+    background-color:bisque;
+    color:black;
+    border:1px solid black;
+    text-align:center;
+    align-self:center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#Margin{
+    margin:0.1rem;
+    height:0;
+    border:1px solid turquoise;
+}
+
+.Center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@media(min-height:700px) and (min-width:700px){
+    :root{
+        font-size:1.15em;
+    }
+}
+
+@media(min-height:900px) and (min-width:900px){
+    :root{
+        font-size:1.25em;
+    }
+}
+
+@media(max-width:800px){
+    .nav{
+        grid-template-columns: 1fr 1fr 2fr;
+        font-size:1.2rem;
+        padding:0.1rem;
+    }
+    .mode{
+        font-size:1.4rem;
+    }
+    .question{
+        font-size:1.5rem;
+    }
+    .option{
+        font-size:1.2rem;
+    }
+    #BQuestion{
+        min-height:15vh;
+    }
+    #CQuestion{
+        min-height:15vh;
+    }
+}
+
+@media(max-height:600px)and(max-width:800px) or (max-width:600px)and(max-height:800px){
+    :root{
+        font-size:0.8em;
+    }
+    .nav{
+        grid-template-columns: 1fr 1fr 2fr;
+        font-size:1.2rem;
+        padding:0.1rem;
+    }
+    .mode{
+        font-size:1.4rem;
+    }
+    .question{
+        font-size:1.4rem;
+    }
+    #BQuestion{
+        min-height:auto;
+    }
+    #CQuestion{
+        min-height:auto;
+    }
+    .option{
+        font-size:1.15rem;
+    }
+    .section{
+        padding:1rem;
+    }
+}
+
+@media (height>800px) and (width<500px) {
+    :root{
+        font-size:1.05em;
+    }
+    .nav{
+        font-size:1rem;
+    }
+    .section{
+        padding:1rem;
+    }
+}
+
+@media(max-height:500px){
+    :root{
+        font-size:0.8em;
+    }
+    .section{
+        padding:1rem;
+    }
+}
+
+@media(max-height:400px) or (max-width:400px){
+    :root{
+        font-size:0.5em;
+    }
+}
