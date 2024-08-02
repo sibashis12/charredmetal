@@ -362,7 +362,7 @@ async function showScores(mode, questions, choices){
     toggleView(getElement("#"+mode+"Mode"));
     clearOptions(mode);
     displayNav(mode);
-    for(let i=0; i<20;){
+    for(let i=0; i<21;){
         showRound(mode, questions[i], choices, i);
         isClicked=0;
         while(true){
@@ -373,7 +373,11 @@ async function showScores(mode, questions, choices){
         }
         if(isClicked===1)
         {
-            if(i===19){
+            if(i===20){
+                i=0;
+                continue;
+            }
+            else if(i===19&& lifeLines===1){
                 i=0;
                 continue;
             }
@@ -381,7 +385,12 @@ async function showScores(mode, questions, choices){
         }
         else if(isClicked===-1){
             if(i===0){
-                i=19;
+                if(lifeLines===0){
+                    i=20;
+                }
+                else{
+                    i=19;
+                }
                 continue;
             }
             i--;
